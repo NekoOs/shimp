@@ -1,16 +1,103 @@
-# Tauri + Vue + TypeScript
+# Shimp
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+> A lightweight, blazing-fast IDE for shell scripting.
 
-## Recommended IDE Setup
+Shimp is a modern IDE designed specifically for writing, organizing, and managing shell scripts (Bash, sh, Zsh, etc.).
+While most editors treat shell scripting as a second-class citizen, Shimp puts it front and center — offering native
+tools that make scripting as pleasant and powerful as coding in any modern language.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+This is a work-in-progress, but the vision is clear.
 
-## Type Support For `.vue` Imports in TS
+---
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+## 🧠 Why Shimp?
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+Because scripting deserves more than just syntax highlighting.
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+Shimp aims to solve real-world frustrations:
+
+* Tired of manually tracking sourced files?
+* Want a smarter view of your modular script structure?
+* Need contextual help based on your actual shell?
+* Looking for rapid iteration without leaving your workspace?
+
+Yeah, us too.
+
+---
+
+## 🛠️ Core Features (WIP)
+
+* Syntax-aware script editor (Bash, sh, Zsh, etc.)
+* Integrated terminal and output viewer (with ANSI color support)
+* File explorer with inline previews
+* One-click execution of scripts with environment isolation
+* Contextual hints and documentation lookup
+* Shell-aware highlighting and autocomplete
+* Smart source resolution and inline code tracing
+* Draft saving and recovery
+* Intelligent script bundler (resolves `source` and `. "..."` across shells)
+* (Coming soon) Plugin system for extending Shimp
+
+---
+
+## ⚡ Performance
+
+Built with [Tauri](https://tauri.app) and [Vue 3](https://vuejs.org), Shimp runs as a lightweight native desktop app. It
+leverages Rust under the hood for fast indexing, parsing, and future extensibility — but we’re not married to it.
+Performance comes first; tooling may evolve.
+
+---
+
+## 🚧 Status
+
+This project is at the earliest stage. No functional code exists yet — just a strong direction, deep motivation, and the
+stubbornness to make scripting feel first-class again.
+
+---
+
+## 🐚 Focused on Shell — Not Just Bash
+
+From `. "..."` in POSIX `sh` to `source` in Bash and advanced completion in `Zsh`, Shimp respects each shell’s nuances.
+You can even define the target shell per script, enabling precise tooling and linting.
+
+---
+
+## 📎 Modular Script Design
+
+Split your logic across clean files, and Shimp will:
+
+* Resolve dependencies automatically
+* Inline them intelligently on build/export
+* Avoid duplicates
+* Retain correct formatting and indentation
+
+Think of it like a makefile for shell, without the pain.
+
+---
+
+## 🧩 Extensible by Design
+
+Planned plugin support will allow adding:
+
+* Custom linters
+* New shell interpreters
+* Formatters and snippets
+* Live preview helpers (e.g., regex testing, output visualization)
+
+---
+
+## 🧪 Inspiration
+
+We love what JetBrains has to offer [BashSupport Pro](https://www.bashsupport.com). But Shimp is independent, open,
+native, and aims to go even further in script management.
+
+---
+
+## 👀 Stay Tuned
+
+Follow development and updates right here. Early builds will be announced in this repository. Contributions, ideas, and
+questions are welcome.
+
+---
+
+*Built by someone who got tired of grepping dozens of sourced files.*
