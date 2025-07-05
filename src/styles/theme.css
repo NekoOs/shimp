@@ -1,0 +1,15 @@
+:root {
+    --color-surface: #f5f5f5;
+    --color-surface-alt: #e0e0e0;
+    --color-text: #111;
+    --color-accent: #007acc;
+    --color-border: #444;
+}
+
+.dark {
+    --color-surface: #1e1e1e;
+    --color-surface-alt: #2d2d2d;
+    --color-text: #eee;
+    --color-accent: #00aaff;
+    --color-border: #555;
+}

@@ -1,3 +1,6 @@
+import './styles/index.css';
+import './styles/theme.css';
+
 import { createApp } from "vue";
 import App from "./App.vue";
 
