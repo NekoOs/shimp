@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { invoke } from "@tauri-apps/api/core";
+import {useI18n} from 'vue-i18n'
 
+const {t} = useI18n()
 const greetMsg = ref("");
 const name = ref("");
 
@@ -12,7 +14,7 @@ async function greet() {
 
 <template>
   <main class="flex flex-col items-center justify-center min-h-screen bg-zinc-900 text-white px-4">
-    <h1 class="text-3xl font-bold mb-6 text-center">Welcome to Tauri + Vue</h1>
+    <h1 class="text-3xl font-bold mb-6 text-center">{{ t('welcome') }}</h1>
 
     <div class="flex justify-center mb-4 gap-4">
       <a href="https://vitejs.dev" target="_blank">
