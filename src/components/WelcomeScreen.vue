@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import {useI18n} from 'vue-i18n'
-  import {useGreeting} from "../composables"
+import { useI18n } from 'vue-i18n'
+import { useGreeting } from '../composables'
 
-  const {t} = useI18n()
+const { t } = useI18n()
 
-  const {name, message, greet} = useGreeting()
+const { name, message, greet } = useGreeting()
 
 </script>
 

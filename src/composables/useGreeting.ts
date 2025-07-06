@@ -1,13 +1,13 @@
-import {ref} from 'vue'
-import {fetchGreeting} from '../services'
+import { ref } from 'vue'
+import { fetchGreeting } from '../services'
 
 export function useGreeting() {
-    const name = ref('')
-    const message = ref('')
+  const name = ref('')
+  const message = ref('')
 
-    async function greet() {
-        message.value = await fetchGreeting(name.value)
-    }
+  async function greet() {
+    message.value = <string>await fetchGreeting(name.value)
+  }
 
-    return {name, message, greet}
+  return { name, message, greet }
 }
