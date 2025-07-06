@@ -30,6 +30,9 @@ export default [
       'vue/component-definition-name-casing': ['error', 'PascalCase'],
       'vue/component-name-in-template-casing': ['error', 'PascalCase'],
       'vue/multi-word-component-names': 'off',
+      'vue/block-order': ['error', {
+        order: ['script', 'template', 'i18n', 'docs', 'style']
+      }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'no-console': 'off',
