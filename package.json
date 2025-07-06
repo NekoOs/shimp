@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "lint": "eslint . --ext .ts,.vue --fix"
   },
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
@@ -22,13 +23,22 @@
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/postcss": "^4.1.11",
     "@tauri-apps/cli": "^2",
+    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/parser": "^8.35.1",
     "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/eslint-config-typescript": "^14.6.0",
     "autoprefixer": "^10.4.21",
+    "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-define-config": "^2.1.0",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-vue": "^10.3.0",
     "postcss": "^8.5.6",
     "postcss-nesting": "^13.0.2",
     "tailwindcss": "^4.1.11",
     "typescript": "~5.6.2",
     "vite": "^6.0.3",
+    "vue-eslint-parser": "^10.2.0",
     "vue-tsc": "^2.1.10"
   }
 }
