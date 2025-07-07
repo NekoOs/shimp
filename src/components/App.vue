@@ -18,48 +18,49 @@ import AppMainPanel from './AppMainPanel.vue'
       direction="vertical"
       class="flex-1 overflow-hidden"
     >
-      <!-- Top horizontal layout -->
+      <!-- Main horizontal layout -->
       <SplitterPanel :min-size="40">
-        <SplitterGroup
-          direction="horizontal"
-          class="h-full"
-        >
+        <div class="flex h-full">
           <AppToolWindowBarLeft />
-          <SplitterPanel
-            :min-size="10"
-            size="16"
-            collapsible
+
+          <SplitterGroup
+            direction="horizontal"
+            class="flex-1"
           >
-            <AppSidebarPanelLeft />
-          </SplitterPanel>
+            <SplitterPanel
+              :min-size="10"
+              :default-size="15"
+              collapsible
+            >
+              <AppSidebarPanelLeft />
+            </SplitterPanel>
 
-          <SplitterResizeHandle />
+            <SplitterResizeHandle />
 
-          <SplitterPanel
-            :min-size="40"
-            class="bg-zinc-950 p-2"
-          >
-            <AppMainPanel />
-          </SplitterPanel>
+            <SplitterPanel>
+              <AppMainPanel />
+            </SplitterPanel>
 
-          <SplitterResizeHandle />
+            <SplitterResizeHandle />
 
-          <SplitterPanel
-            :min-size="10"
-            size="16"
-            collapsible
-          >
-            <AppSidebarPanelRight />
-          </SplitterPanel>
+            <SplitterPanel
+              :min-size="10"
+              :default-size="0"
+              collapsible
+            >
+              <AppSidebarPanelRight />
+            </SplitterPanel>
+          </SplitterGroup>
+
           <AppToolWindowBarRight />
-        </SplitterGroup>
+        </div>
       </SplitterPanel>
 
       <SplitterResizeHandle />
 
       <SplitterPanel
         :min-size="15"
-        size="25"
+        :default-size="25"
         collapsible
       >
         <AppDockBottomPanel />
@@ -69,3 +70,4 @@ import AppMainPanel from './AppMainPanel.vue'
     <AppStatusBar />
   </div>
 </template>
+
