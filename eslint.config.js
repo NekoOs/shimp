@@ -4,6 +4,7 @@ import tsParser from '@typescript-eslint/parser'
 import vueParser from 'vue-eslint-parser'
 
 export default [
+  ...vuePlugin.configs['flat/recommended'],
   // Lint for .vue files
   {
     files: ['src/**/*.vue'],
@@ -27,6 +28,7 @@ export default [
       '@typescript-eslint': tsPlugin
     },
     rules: {
+      'vue/component-api-style': ['error', ['script-setup']],
       'vue/component-definition-name-casing': ['error', 'PascalCase'],
       'vue/component-name-in-template-casing': ['error', 'PascalCase'],
       'vue/multi-word-component-names': 'off',
