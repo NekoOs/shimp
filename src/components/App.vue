@@ -26,12 +26,11 @@ import AppMainPanel from './AppMainPanel.vue'
         >
           <AppToolWindowBarLeft />
           <SplitterPanel
-            :min-size="4"
+            :min-size="10"
             size="16"
+            collapsible
           >
-            <div class="flex h-full">
-              <AppSidebarPanelLeft />
-            </div>
+            <AppSidebarPanelLeft />
           </SplitterPanel>
 
           <SplitterResizeHandle />
@@ -46,12 +45,11 @@ import AppMainPanel from './AppMainPanel.vue'
           <SplitterResizeHandle />
 
           <SplitterPanel
-            :min-size="4"
+            :min-size="10"
             size="16"
+            collapsible
           >
-            <div class="flex h-full">
-              <AppSidebarPanelRight />
-            </div>
+            <AppSidebarPanelRight />
           </SplitterPanel>
           <AppToolWindowBarRight />
         </SplitterGroup>
@@ -62,6 +60,7 @@ import AppMainPanel from './AppMainPanel.vue'
       <SplitterPanel
         :min-size="15"
         size="25"
+        collapsible
       >
         <AppDockBottomPanel />
       </SplitterPanel>
