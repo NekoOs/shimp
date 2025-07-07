@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import { SplitterGroup, SplitterPanel, SplitterResizeHandle } from 'reka-ui'
+import AppToolWindowBarLeft from './AppToolWindowBarLeft.vue'
+import AppSidebarPanelLeft from './AppSidebarPanelLeft.vue'
+import AppSidebarPanelRight from './AppSidebarPanelRight.vue'
+import AppToolWindowBarRight from './AppToolWindowBarRight.vue'
+import AppDockBottomPanel from './AppDockBottomPanel.vue'
+import AppStatusBar from './AppStatusBar.vue'
+import AppMainToolbar from './AppMainToolbar.vue'
+import AppMainPanel from './AppMainPanel.vue'
 </script>
 
 <template>
   <div class="w-screen h-screen flex flex-col bg-zinc-950 text-gray-200 font-mono text-sm">
-    <!-- AppMainToolbar -->
-    <div class="bg-zinc-800 border-b border-zinc-700 px-3 py-2">
-      AppMainToolbar
-    </div>
+    <AppMainToolbar />
 
     <SplitterGroup
       direction="vertical"
@@ -19,70 +24,49 @@ import { SplitterGroup, SplitterPanel, SplitterResizeHandle } from 'reka-ui'
           direction="horizontal"
           class="h-full"
         >
-          <!-- AppSidebarPanelLeft -->
+          <AppToolWindowBarLeft />
           <SplitterPanel
             :min-size="4"
             size="16"
           >
             <div class="flex h-full">
-              <!-- AppToolWindowBarLeft -->
-              <div class="w-10 bg-zinc-900 border-r border-zinc-700 p-2 flex justify-center">
-                L
-              </div>
-              <!-- AppSidebarPanelLeft -->
-              <div class="flex-1 bg-zinc-800 border-r border-zinc-700 p-2">
-                AppSidebarPanelLeft
-              </div>
+              <AppSidebarPanelLeft />
             </div>
           </SplitterPanel>
 
           <SplitterResizeHandle />
 
-          <!-- AppMainPanel -->
           <SplitterPanel
             :min-size="40"
             class="bg-zinc-950 p-2"
           >
-            AppMainPanel (tabs, welcome, editors, etc.)
+            <AppMainPanel />
           </SplitterPanel>
 
           <SplitterResizeHandle />
 
-          <!-- AppSidebarPanelRight -->
           <SplitterPanel
             :min-size="4"
             size="16"
           >
             <div class="flex h-full">
-              <!-- AppSidebarPanelRight -->
-              <div class="flex-1 bg-zinc-800 border-l border-zinc-700 p-2">
-                AppSidebarPanelRight
-              </div>
-              <!-- AppToolWindowBarRight -->
-              <div class="w-10 bg-zinc-900 border-l border-zinc-700 p-2 flex justify-center">
-                R
-              </div>
+              <AppSidebarPanelRight />
             </div>
           </SplitterPanel>
+          <AppToolWindowBarRight />
         </SplitterGroup>
       </SplitterPanel>
 
       <SplitterResizeHandle />
 
-      <!-- AppDockBottomPanel -->
       <SplitterPanel
         :min-size="15"
         size="25"
       >
-        <div class="bg-zinc-900 border-t border-zinc-700 px-2 py-1 h-full">
-          AppDockBottomPanel (logs, terminal, output, etc.)
-        </div>
+        <AppDockBottomPanel />
       </SplitterPanel>
     </SplitterGroup>
 
-    <!-- AppStatusBar -->
-    <div class="bg-zinc-800 border-t border-zinc-800 px-2 py-1">
-      AppStatusBar (global info, indicators)
-    </div>
+    <AppStatusBar />
   </div>
 </template>
