@@ -14,58 +14,60 @@ import AppMainPanel from './AppMainPanel.vue'
   <div class="w-screen h-screen flex flex-col bg-zinc-950 text-gray-200 font-mono text-sm">
     <AppMainToolbar />
 
-    <SplitterGroup
-      direction="vertical"
-      class="flex-1 overflow-hidden"
-    >
-      <!-- Main horizontal layout -->
-      <SplitterPanel
-        :min-size="40"
-        class="flex h-full"
-      >
-        <AppToolWindowBarLeft />
+    <div class="flex h-full">
+      <AppToolWindowBarLeft />
 
-        <SplitterGroup
-          direction="horizontal"
+      <SplitterGroup
+        direction="vertical"
+        class="flex-1 overflow-hidden"
+      >
+        <!-- Main horizontal layout -->
+        <SplitterPanel
+          :min-size="40"
+          class="flex h-full"
         >
-          <SplitterPanel
-            :min-size="10"
-            :default-size="15"
-            collapsible
+          <SplitterGroup
+            direction="horizontal"
           >
-            <AppSidebarPanelLeft />
-          </SplitterPanel>
+            <SplitterPanel
+              :min-size="10"
+              :default-size="15"
+              collapsible
+            >
+              <AppSidebarPanelLeft />
+            </SplitterPanel>
 
-          <SplitterResizeHandle />
+            <SplitterResizeHandle />
 
-          <SplitterPanel>
-            <AppMainPanel />
-          </SplitterPanel>
+            <SplitterPanel :min-size="20">
+              <AppMainPanel />
+            </SplitterPanel>
 
-          <SplitterResizeHandle />
+            <SplitterResizeHandle />
 
-          <SplitterPanel
-            :min-size="10"
-            :default-size="0"
-            collapsible
-          >
-            <AppSidebarPanelRight />
-          </SplitterPanel>
-        </SplitterGroup>
+            <SplitterPanel
+              :min-size="10"
+              :default-size="0"
+              collapsible
+            >
+              <AppSidebarPanelRight />
+            </SplitterPanel>
+          </SplitterGroup>
+        </SplitterPanel>
 
-        <AppToolWindowBarRight />
-      </SplitterPanel>
+        <SplitterResizeHandle />
 
-      <SplitterResizeHandle />
+        <SplitterPanel
+          :min-size="15"
+          :default-size="25"
+          collapsible
+        >
+          <AppDockBottomPanel />
+        </SplitterPanel>
+      </SplitterGroup>
 
-      <SplitterPanel
-        :min-size="15"
-        :default-size="25"
-        collapsible
-      >
-        <AppDockBottomPanel />
-      </SplitterPanel>
-    </SplitterGroup>
+      <AppToolWindowBarRight />
+    </div>
 
     <AppStatusBar />
   </div>

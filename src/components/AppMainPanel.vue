@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="p-2">
+  <div class="w-full h-full p-2">
     AppMainPanel (tabs, welcome, editors, etc.)
   </div>
 </template>
