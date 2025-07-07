@@ -84,6 +84,8 @@ Planned plugin support will allow adding:
 * Formatters and snippets
 * Live preview helpers (e.g., regex testing, output visualization)
 
+For UI-level contributions and plugin zones, see the [internal layout structure](docs/layout.md).
+
 ---
 
 ## 🧪 Inspiration
