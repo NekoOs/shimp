@@ -2,7 +2,7 @@ import './styles/index.css'
 import './styles/theme.css'
 
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from './components/App.vue'
 import { i18n } from './i18n'
 
 createApp(App).use(i18n).mount('#app')
