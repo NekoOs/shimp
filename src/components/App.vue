@@ -19,41 +19,41 @@ import AppMainPanel from './AppMainPanel.vue'
       class="flex-1 overflow-hidden"
     >
       <!-- Main horizontal layout -->
-      <SplitterPanel :min-size="40">
-        <div class="flex h-full">
-          <AppToolWindowBarLeft />
+      <SplitterPanel
+        :min-size="40"
+        class="flex h-full"
+      >
+        <AppToolWindowBarLeft />
 
-          <SplitterGroup
-            direction="horizontal"
-            class="flex-1"
+        <SplitterGroup
+          direction="horizontal"
+        >
+          <SplitterPanel
+            :min-size="10"
+            :default-size="15"
+            collapsible
           >
-            <SplitterPanel
-              :min-size="10"
-              :default-size="15"
-              collapsible
-            >
-              <AppSidebarPanelLeft />
-            </SplitterPanel>
+            <AppSidebarPanelLeft />
+          </SplitterPanel>
 
-            <SplitterResizeHandle />
+          <SplitterResizeHandle />
 
-            <SplitterPanel>
-              <AppMainPanel />
-            </SplitterPanel>
+          <SplitterPanel>
+            <AppMainPanel />
+          </SplitterPanel>
 
-            <SplitterResizeHandle />
+          <SplitterResizeHandle />
 
-            <SplitterPanel
-              :min-size="10"
-              :default-size="0"
-              collapsible
-            >
-              <AppSidebarPanelRight />
-            </SplitterPanel>
-          </SplitterGroup>
+          <SplitterPanel
+            :min-size="10"
+            :default-size="0"
+            collapsible
+          >
+            <AppSidebarPanelRight />
+          </SplitterPanel>
+        </SplitterGroup>
 
-          <AppToolWindowBarRight />
-        </div>
+        <AppToolWindowBarRight />
       </SplitterPanel>
 
       <SplitterResizeHandle />

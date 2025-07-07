@@ -2,5 +2,7 @@
 </script>
 
 <template>
-  <div>AppMainPanel (tabs, welcome, editors, etc.)</div>
+  <div class="p-2">
+    AppMainPanel (tabs, welcome, editors, etc.)
+  </div>
 </template>
